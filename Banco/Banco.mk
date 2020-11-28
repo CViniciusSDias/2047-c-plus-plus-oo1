@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=../build-$(ConfigurationName)/Banco/main.cpp$(ObjectSuffix) 
+Objects0=../build-$(ConfigurationName)/Banco/Conta.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/main.cpp$(ObjectSuffix) 
 
 
 
@@ -91,6 +91,14 @@ PreBuild:
 ##
 ## Objects
 ##
+../build-$(ConfigurationName)/Banco/Conta.cpp$(ObjectSuffix): Conta.cpp ../build-$(ConfigurationName)/Banco/Conta.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/mnt/Dados/Documentos/code/cursos/2047-c-plus-plus-oo-1/2047-c-plus-plus-oo-1/Banco/Conta.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Conta.cpp$(ObjectSuffix) $(IncludePath)
+../build-$(ConfigurationName)/Banco/Conta.cpp$(DependSuffix): Conta.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/Banco/Conta.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/Banco/Conta.cpp$(DependSuffix) -MM Conta.cpp
+
+../build-$(ConfigurationName)/Banco/Conta.cpp$(PreprocessSuffix): Conta.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/Banco/Conta.cpp$(PreprocessSuffix) Conta.cpp
+
 ../build-$(ConfigurationName)/Banco/main.cpp$(ObjectSuffix): main.cpp ../build-$(ConfigurationName)/Banco/main.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/mnt/Dados/Documentos/code/cursos/2047-c-plus-plus-oo-1/2047-c-plus-plus-oo-1/Banco/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 ../build-$(ConfigurationName)/Banco/main.cpp$(DependSuffix): main.cpp
