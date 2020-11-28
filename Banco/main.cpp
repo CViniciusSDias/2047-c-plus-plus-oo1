@@ -11,8 +11,7 @@ void ExibeSaldo(const Conta& conta)
 
 int main()
 {
-    Conta umaConta;
-    umaConta.definirNomeTitular("Vinicius");
+    Conta umaConta("123456", "Vinicius", "123.456.789-10");
     
     Conta umaOutraConta;
 
