@@ -17,8 +17,12 @@ private:
 
 public:
     Conta(std::string numero, std::string nomeTitular, std::string cpfTitular);
+    ~Conta();
     void sacar(float valorASacar);
     void depositar(float valorADepositar);
     float recuperaSaldo() const;
     void definirNomeTitular(std::string nome);
+
+private:
+    void verificaTamanhoDoNome();
 };

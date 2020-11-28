@@ -6,6 +6,8 @@ using namespace std;
 
 void ExibeSaldo(const Conta& conta)
 {
+    Conta umaContaDesnecessaria("123456", "Vinicius", "123.456.789-10");
+
     cout << "O saldo da conta é: " << conta.recuperaSaldo() << endl;
 }
 
@@ -15,13 +17,13 @@ int main()
     umaConta.depositar(500);
     umaConta.sacar(200);
 
-    cout << "Uma conta: " << umaConta.recuperaSaldo() << endl;
+    ExibeSaldo(umaConta);
 
     Conta umaOutraConta("654321", "Dias", "098.765.432-10");
     umaOutraConta.depositar(300);
     umaOutraConta.sacar(50);
 
-    cout << "Uma conta: " << umaOutraConta.recuperaSaldo() << endl;
+    ExibeSaldo(umaOutraConta);
 
     Conta maisUmaConta("654321", "Dias", "098.765.432-10");
 
