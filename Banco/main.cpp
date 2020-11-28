@@ -17,5 +17,15 @@ int main()
 
     cout << "Uma conta: " << umaConta.recuperaSaldo() << endl;
 
+    Conta umaOutraConta("654321", "Dias", "098.765.432-10");
+    umaOutraConta.depositar(300);
+    umaOutraConta.sacar(50);
+
+    cout << "Uma conta: " << umaOutraConta.recuperaSaldo() << endl;
+
+    Conta maisUmaConta("654321", "Dias", "098.765.432-10");
+
+    cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
+
     return 0;
 }
