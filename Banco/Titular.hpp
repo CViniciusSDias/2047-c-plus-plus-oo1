@@ -4,9 +4,11 @@
 
 class Titular
 {
-private:
+public:
     Cpf cpf;
+private:
     std::string nome;
+
 public:
     Titular(Cpf cpf, std::string nome);
 

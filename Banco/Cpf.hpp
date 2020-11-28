@@ -7,6 +7,7 @@ private:
     std::string numero;
 public:
     explicit Cpf(std::string numero);
-    std::string recuperaNumero();
+    Cpf(const Cpf& cpf);
+    std::string recuperaNumero() const;
 };
 
