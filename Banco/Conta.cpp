@@ -3,10 +3,11 @@
 
 int Conta::numeroDeContas = 0;
 
-Conta::Conta(std::string numero, Titular titular):
+Conta::Conta(std::string numero, Titular titular, short int tipoConta):
     numero(numero), 
     titular(titular),
-    saldo(0)
+    saldo(0),
+    tipoConta(tipoConta)
 {
     numeroDeContas++;
 }
@@ -23,7 +24,13 @@ void Conta::sacar(float valorASacar)
         return;
     }
     
-    float tarifaDeSaque = valorASacar * 0.05;
+    float taxa;
+    if (tipoConta == 1) {
+        taxa = 0.05;
+    } else if (tipoConta == 2) {
+        taxa = 0.03;
+    }
+    float tarifaDeSaque = valorASacar * taxa;
     float valorDoSaque = valorASacar + tarifaDeSaque;
 
     if (valorDoSaque > saldo) {

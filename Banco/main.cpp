@@ -16,14 +16,14 @@ int main()
 {
     Titular titular(Cpf("123.456.789-10"), "Vinicius");
     
-    Conta umaConta("123456", titular);
+    Conta umaConta("123456", titular, 2);
     umaConta.depositar(500);
     umaConta.sacar(200);
 
     ExibeSaldo(umaConta);
 
     Titular outro(Cpf("098.765.432-10"), "Vinicius Dias");
-    Conta umaOutraConta("654321", titular);
+    Conta umaOutraConta("654321", titular, 2);
     umaOutraConta.depositar(300);
     umaOutraConta.sacar(50);
 
