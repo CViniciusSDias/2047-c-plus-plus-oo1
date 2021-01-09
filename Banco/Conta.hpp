@@ -19,7 +19,7 @@ protected:
 
 public:
     Conta(std::string numero, Titular titular);
-    ~Conta();
+    virtual ~Conta();
     virtual void sacar(float valorASacar);
     void depositar(float valorADepositar);
     float recuperaSaldo() const;

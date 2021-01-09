@@ -13,6 +13,7 @@ Conta::Conta(std::string numero, Titular titular):
 
 Conta::~Conta()
 {
+    std::cout << "Destrutor da conta corrente" << std::endl;
     numeroDeContas--;
 }
 
