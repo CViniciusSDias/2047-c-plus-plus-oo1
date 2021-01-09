@@ -3,6 +3,7 @@
 #include "Conta.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
+#include "Funcionario.hpp"
 
 using namespace std;
 
@@ -29,6 +30,8 @@ int main()
     ExibeSaldo(umaOutraConta);
 
     cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
+
+    Funcionario funcionario(Cpf("123.456.789-10"), "Dias Vinicius", 1000);
 
     return 0;
 }
