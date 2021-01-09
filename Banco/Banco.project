@@ -93,6 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Autenticavel.cpp"/>
+    <File Name="Autenticavel.hpp"/>
     <File Name="Gerente.cpp"/>
     <File Name="Gerente.hpp"/>
     <File Name="Caixa.cpp"/>
