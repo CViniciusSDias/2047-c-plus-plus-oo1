@@ -32,9 +32,13 @@ int main()
     Titular outro(Cpf("098.765.432-10"), "Vinicius Dias");
     ContaCorrente umaOutraConta("654321", titular);
     umaOutraConta.depositar(300);
-    RealizaSaque(umaOutraConta);
+    
+    ContaCorrente outraContaCorrente("546312", titular);
+    
+    umaOutraConta.transferePara(outraContaCorrente, 250);
 
     ExibeSaldo(umaOutraConta);
+    ExibeSaldo(outraContaCorrente);
 
     cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
 
