@@ -93,6 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Pessoa.cpp"/>
+    <File Name="Pessoa.hpp"/>
     <File Name="Funcionario.cpp"/>
     <File Name="Funcionario.hpp"/>
     <File Name="Cpf.cpp"/>
