@@ -93,6 +93,10 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Gerente.cpp"/>
+    <File Name="Gerente.hpp"/>
+    <File Name="Caixa.cpp"/>
+    <File Name="Caixa.hpp"/>
     <File Name="ContaCorrente.cpp"/>
     <File Name="ContaCorrente.hpp"/>
     <File Name="ContaPoupanca.cpp"/>

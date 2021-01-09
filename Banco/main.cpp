@@ -35,7 +35,7 @@ int main()
     
     ContaCorrente outraContaCorrente("546312", titular);
     
-    umaOutraConta.transferePara(outraContaCorrente, 250);
+    umaOutraConta.transferePara(umaConta, 250);
 
     ExibeSaldo(umaOutraConta);
     ExibeSaldo(outraContaCorrente);
