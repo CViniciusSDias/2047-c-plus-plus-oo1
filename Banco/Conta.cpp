@@ -13,15 +13,8 @@ Conta::Conta(std::string numero, Titular titular):
 
 Conta::~Conta()
 {
-    std::cout << "Destrutor da conta corrente" << std::endl;
+    std::cout << "Destrutor da conta" << std::endl;
     numeroDeContas--;
-}
-
-float Conta::taxaDeSaque() const
-{
-    std::cout << "Chamando método sacar da conta corrente" << std::endl;
-
-    return 0.05;
 }
 
 void Conta::sacar(float valorASacar)

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Conta.hpp"
+#include "ContaCorrente.hpp"
 #include "ContaPoupanca.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
@@ -28,9 +29,8 @@ int main()
 
     ExibeSaldo(umaConta);
 
-
     Titular outro(Cpf("098.765.432-10"), "Vinicius Dias");
-    Conta umaOutraConta("654321", titular);
+    ContaCorrente umaOutraConta("654321", titular);
     umaOutraConta.depositar(300);
     RealizaSaque(umaOutraConta);
 
