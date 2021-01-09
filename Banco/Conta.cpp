@@ -3,11 +3,10 @@
 
 int Conta::numeroDeContas = 0;
 
-Conta::Conta(std::string numero, Titular titular, short int tipoConta):
+Conta::Conta(std::string numero, Titular titular):
     numero(numero), 
     titular(titular),
-    saldo(0),
-    tipoConta(tipoConta)
+    saldo(0)
 {
     numeroDeContas++;
 }
@@ -19,18 +18,14 @@ Conta::~Conta()
 
 void Conta::sacar(float valorASacar)
 {
+    std::cout << "Chamando método sacar da conta corrente" << std::endl;
+    
     if (valorASacar < 0) {
         std::cout << "Não pode sacar valor negativo" << std::endl;
         return;
     }
-    
-    float taxa;
-    if (tipoConta == 1) {
-        taxa = 0.05;
-    } else if (tipoConta == 2) {
-        taxa = 0.03;
-    }
-    float tarifaDeSaque = valorASacar * taxa;
+
+    float tarifaDeSaque = valorASacar * 0.05;
     float valorDoSaque = valorASacar + tarifaDeSaque;
 
     if (valorDoSaque > saldo) {
