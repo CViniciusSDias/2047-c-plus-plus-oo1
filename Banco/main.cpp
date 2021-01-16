@@ -18,9 +18,9 @@ void ExibeSaldo(const Conta& conta)
 
 void RealizaSaque(Conta& conta)
 {
-    auto resultado = conta.sacar(200);
-    if (resultado.first == Conta::Sucesso) {
-        cout << "Novo saldo da conta:" << resultado.second << endl;
+    std::variant<Conta::ResultadoSaque, float> resultado = conta.sacar(200);
+    if (auto saldo = std::get_if<float>(&resultado)) {
+        cout << "Novo saldo da conta:" << *saldo << endl;
     }
 }
 
