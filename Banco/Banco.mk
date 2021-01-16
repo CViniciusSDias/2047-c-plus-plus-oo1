@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ##
 CodeLiteDir:=/usr/share/codelite
 Objects0=../build-$(ConfigurationName)/Banco/main.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/Titular.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/Conta.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/Funcionario.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/Cpf.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/ContaPoupanca.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/Gerente.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/ContaCorrente.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/Caixa.cpp$(ObjectSuffix) ../build-$(ConfigurationName)/Banco/Autenticavel.cpp$(ObjectSuffix) \
-	../build-$(ConfigurationName)/Banco/Pessoa.cpp$(ObjectSuffix) 
+	
 
 
 
@@ -171,14 +171,6 @@ PreBuild:
 
 ../build-$(ConfigurationName)/Banco/Autenticavel.cpp$(PreprocessSuffix): Autenticavel.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/Banco/Autenticavel.cpp$(PreprocessSuffix) Autenticavel.cpp
-
-../build-$(ConfigurationName)/Banco/Pessoa.cpp$(ObjectSuffix): Pessoa.cpp ../build-$(ConfigurationName)/Banco/Pessoa.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/mnt/Dados/Documentos/code/cursos/2047-c-plus-plus-oo-1/2047-c-plus-plus-oo-1/Banco/Pessoa.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pessoa.cpp$(ObjectSuffix) $(IncludePath)
-../build-$(ConfigurationName)/Banco/Pessoa.cpp$(DependSuffix): Pessoa.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/Banco/Pessoa.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/Banco/Pessoa.cpp$(DependSuffix) -MM Pessoa.cpp
-
-../build-$(ConfigurationName)/Banco/Pessoa.cpp$(PreprocessSuffix): Pessoa.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/Banco/Pessoa.cpp$(PreprocessSuffix) Pessoa.cpp
 
 
 -include ../build-$(ConfigurationName)/Banco//*$(DependSuffix)

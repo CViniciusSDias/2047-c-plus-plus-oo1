@@ -4,7 +4,7 @@
 #include "Cpf.hpp"
 #include <string>
 
-class Funcionario : public Pessoa
+class Funcionario : public Pessoa<Cpf>
 {
 private:
     float salario;
