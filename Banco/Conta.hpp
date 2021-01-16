@@ -22,6 +22,7 @@ public:
     virtual ~Conta();
     void sacar(float valorASacar);
     void depositar(float valorADepositar);
+    void operator+=(float valorADepositar);
     float recuperaSaldo() const;
     virtual float taxaDeSaque() const = 0;
 };

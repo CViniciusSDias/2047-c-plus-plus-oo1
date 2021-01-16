@@ -42,7 +42,7 @@ int main()
 
     Titular outro(Cpf("098.765.432-10"), "Vinicius Dias", "outrasenha");
     ContaCorrente umaOutraConta("654321", titular);
-    umaOutraConta.depositar(300);
+    umaOutraConta += 300;
     
     ContaCorrente outraContaCorrente("546312", titular);
     

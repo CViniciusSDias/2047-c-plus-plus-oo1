@@ -45,6 +45,11 @@ void Conta::depositar(float valorADepositar)
     saldo += valorADepositar;
 }
 
+void Conta::operator+=(float valorADepositar)
+{
+    depositar(valorADepositar);
+}
+
 float Conta::recuperaSaldo() const
 {
     return saldo;
