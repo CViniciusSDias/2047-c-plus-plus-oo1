@@ -93,6 +93,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="DiaDaSemana.hpp"/>
     <File Name="Autenticavel.cpp"/>
     <File Name="Autenticavel.hpp"/>
     <File Name="Gerente.cpp"/>
