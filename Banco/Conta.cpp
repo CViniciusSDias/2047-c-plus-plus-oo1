@@ -17,11 +17,11 @@ Conta::~Conta()
     numeroDeContas--;
 }
 
-Conta::ResultadoSaque Conta::sacar(float valorASacar)
+std::pair<Conta::ResultadoSaque, float> Conta::sacar(float valorASacar)
 {
     if (valorASacar < 0) {
         std::cout << "Não pode sacar valor negativo" << std::endl;
-        return ValorNegativo;
+        return std::make_pair(ValorNegativo, saldo);
     }
 
     float tarifaDeSaque = valorASacar * taxaDeSaque();
@@ -29,12 +29,12 @@ Conta::ResultadoSaque Conta::sacar(float valorASacar)
 
     if (valorDoSaque > saldo) {
         std::cout << "Saldo insuficiente" << std::endl;
-        return SaldoInsuficiente;
+        return std::make_pair(SaldoInsuficiente, saldo);
     }
 
     saldo -= valorDoSaque;
     
-    return Sucesso;
+    return std::make_pair(Sucesso, saldo);
 }
 
 void Conta::depositar(float valorADepositar)

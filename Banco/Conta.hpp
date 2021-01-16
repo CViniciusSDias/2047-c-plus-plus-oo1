@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <utility>
 #include "Titular.hpp"
 
 class Conta
@@ -25,7 +26,7 @@ public:
 
     Conta(std::string numero, Titular titular);
     virtual ~Conta();
-    ResultadoSaque sacar(float valorASacar);
+    std::pair<ResultadoSaque, float> sacar(float valorASacar);
     void depositar(float valorADepositar);
     void operator+=(float valorADepositar);
     float recuperaSaldo() const;
