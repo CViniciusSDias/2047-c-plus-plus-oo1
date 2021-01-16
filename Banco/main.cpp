@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Gerente.hpp"
 #include "Conta.hpp"
 #include "ContaCorrente.hpp"
 #include "ContaPoupanca.hpp"
@@ -50,6 +51,8 @@ int main()
     ExibeSaldo(outraContaCorrente);
 
     cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
+
+    Gerente umGerente(Cpf("000.000.000-00"), "Nome do Gerente", 1500, 2, "123456");
 
     return 0;
 }
