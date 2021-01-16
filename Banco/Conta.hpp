@@ -18,9 +18,14 @@ protected:
     float saldo;
 
 public:
+    enum ResultadoSaque
+    {
+        Sucesso, ValorNegativo, SaldoInsuficiente
+    };
+
     Conta(std::string numero, Titular titular);
     virtual ~Conta();
-    void sacar(float valorASacar);
+    ResultadoSaque sacar(float valorASacar);
     void depositar(float valorADepositar);
     void operator+=(float valorADepositar);
     float recuperaSaldo() const;
