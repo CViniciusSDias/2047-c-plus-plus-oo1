@@ -53,7 +53,13 @@ int main()
 
     cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
 
-    Gerente umGerente(Cpf("000.000.000-00"), "Nome do Gerente", 1500, Terca, "123456");
+    Gerente umGerente(
+        Cpf("000.000.000-00"),
+        "Nome do Gerente",
+        1500,
+        DiaDaSemana::Terca,
+        "123456"
+    );
 
     return 0;
 }

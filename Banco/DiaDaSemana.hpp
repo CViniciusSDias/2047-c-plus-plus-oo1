@@ -1,6 +1,6 @@
 #pragma once
 
-enum DiaDaSemana : unsigned char
+enum class DiaDaSemana : unsigned char
 {
     Domingo, Segunda, Terca, Quarta, Quinta, Sexta, Sabado
 };
