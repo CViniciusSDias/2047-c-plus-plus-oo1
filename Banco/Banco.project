@@ -21,7 +21,6 @@
     <File Name="Cpf.hpp"/>
     <File Name="Titular.cpp"/>
     <File Name="Titular.hpp"/>
-    <File Name="Conta.cpp"/>
     <File Name="Conta.hpp"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>

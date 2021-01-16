@@ -5,13 +5,6 @@ ContaCorrente::ContaCorrente(std::string numero, Titular titular): Conta(numero,
 {
 }
 
-float ContaCorrente::taxaDeSaque() const
-{
-    std::cout << "Chamando método sacar da conta corrente" << std::endl;
-
-    return 0.05;
-}
-
 void ContaCorrente::transferePara(Conta& destino, float valor)
 {
     auto resultado = sacar(valor);
