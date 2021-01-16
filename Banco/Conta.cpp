@@ -61,3 +61,8 @@ int Conta::recuperaNumeroDeContas()
 {
     return numeroDeContas;
 }
+
+bool Conta::operator<(const Conta& outra)
+{
+    return this->saldo < outra.saldo;
+}

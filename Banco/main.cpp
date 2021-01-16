@@ -43,15 +43,18 @@ ostream& operator<<(ostream& cout, const Conta& conta)
     return cout;
 }
 
+template<typename T>
+T Menor(T a, T b)
+{
+    return a < b ? a : b;
+}
+
 int main()
 {
     Titular titular(Cpf("123.456.789-10"), "Vinicius", "umasenha");
 
     ContaPoupanca umaConta("123456", titular);
     umaConta.depositar(500);
-    RealizaSaque(umaConta);
-
-    ExibeSaldo(umaConta);
 
     Titular outro(Cpf("098.765.432-10"), "Vinicius Dias", "outrasenha");
     ContaCorrente umaOutraConta("654321", titular);
@@ -61,8 +64,9 @@ int main()
     
     outraContaCorrente += umaOutraConta;
 
-    cout << umaOutraConta;
-    ExibeSaldo(outraContaCorrente);
+    cout << Menor<Conta&>(umaConta, umaOutraConta);
+    cout << Menor(1, 2) << endl;
+    cout << Menor(1.5, 2.4) << endl;
 
     cout << "Número de contas: " << Conta::recuperaNumeroDeContas() << endl;
 
