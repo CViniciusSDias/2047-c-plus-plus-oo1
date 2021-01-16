@@ -32,7 +32,10 @@ void FazLogin(Autenticavel& alguem, string senha)
 
 ostream& operator<<(ostream& cout, const Conta& conta)
 {
+    Pessoa titular = conta.titular;
     cout << "O saldo da conta é (operador): " << conta.recuperaSaldo() << endl;
+    cout << "O titular da conta é: " << titular.recuperaNome() << endl;
+
     return cout;
 }
 
